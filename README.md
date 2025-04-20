@@ -255,6 +255,7 @@ Para monitorar a aplicação em produção, considere adicionar:
 
 Possíveis melhorias para o projeto:
 
+
 - Autenticação de usuários
 - Interface administrativa
 - Categorização de tarefas
