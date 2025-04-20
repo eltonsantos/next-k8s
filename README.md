@@ -261,6 +261,7 @@ Possíveis melhorias para o projeto:
 - Alertas e notificações
 - Integração com calendários
 - Versão mobile com React Native
+- Deploy no GCP
 
 ## Licença
 
