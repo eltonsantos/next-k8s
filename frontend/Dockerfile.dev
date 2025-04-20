@@ -1,0 +1,21 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Instalar dependências necessárias para desenvolvimento
+RUN apk add --no-cache libc6-compat && npm install -g pnpm
+
+# Copiar os arquivos de configuração
+COPY package*.json ./
+
+# Instalar todas as dependências, incluindo as de desenvolvimento
+RUN pnpm install
+
+# Não precisamos copiar o código fonte aqui, pois usaremos volumes para desenvolvimento
+# O volume será montado em tempo de execução
+
+# Expor a porta utilizada pelo Next.js
+EXPOSE 3000
+
+# Comando para iniciar a aplicação em modo de desenvolvimento
+CMD ["pnpm", "run", "dev"]
