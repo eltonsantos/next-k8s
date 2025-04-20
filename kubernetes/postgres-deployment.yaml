@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: postgres
-        image: ${GITHUB_USERNAME}/task-manager-db:latest
+        image: eltin182/task-manager-db:latest
         ports:
         - containerPort: 5432
         env:

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ${GITHUB_USERNAME}/task-manager-web:latest
+        image: eltin182/task-manager-web:latest
         ports:
         - containerPort: 3000
         env:

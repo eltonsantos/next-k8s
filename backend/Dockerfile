@@ -6,7 +6,7 @@ WORKDIR /app
 RUN apk --no-cache add dumb-init && npm install -g pnpm
 
 # Copiar os arquivos de configuração do projeto
-COPY package*.json ./
+COPY package*.json pnpm-lock.yaml ./
 
 # Instalar as dependências usando pnpm
 RUN pnpm install --prod --frozen-lockfile
